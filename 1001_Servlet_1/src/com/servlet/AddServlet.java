@@ -17,8 +17,8 @@ public class AddServlet extends HttpServlet
         	   
         	   int k = i+j;
         	   
-        	   PrintWriter out = res.getWriter();
+        	   PrintWriter out = res.getWriter();  //getting writer object 'out' to write on webpage
         	   
-        	   out.println("Addition is : "+k);
+        	   out.println("Addition is : "+k);    //printing on webpage 
         }
 }
