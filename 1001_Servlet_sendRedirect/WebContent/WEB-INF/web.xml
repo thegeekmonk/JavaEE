@@ -16,7 +16,7 @@
    
    <servlet>
       <servlet-name>Square</servlet-name>
-      <servlet-class>com.servlet.Square</servlet-class>
+      <servlet-class>com.servlet.SquareServlet</servlet-class>
    </servlet>
    
    <servlet-mapping>
