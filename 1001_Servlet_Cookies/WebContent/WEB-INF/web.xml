@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>1001_Servlet_Cookies</display-name>
+  
+  <servlet>
+     <servlet-name>add</servlet-name>
+     <servlet-class>com.servlet.AddServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+       <servlet-name>add</servlet-name>
+       <url-pattern>/addRequest</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+        <servlet-name>square</servlet-name>
+        <servlet-class>com.servlet.SquareServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+         <servlet-name>square</servlet-name>
+         <url-pattern>/sqrtRequest</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+</web-app>
