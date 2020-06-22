@@ -17,10 +17,10 @@ public class AddServlet extends HttpServlet
     	     
     	     int k = i+j;
     	     
-    	     HttpSession session = req.getSession();   	     
-    	     session.setAttribute("k",k);
+    	     HttpSession session = req.getSession();  //using HttpSession so that values will be present during entire session 	     
+    	     session.setAttribute("k",k);  //setting attribute in session
     	     
-    	     res.sendRedirect("sqrtRequest");
+    	     res.sendRedirect("sqrtRequest");   //telling client to go to another servlet
     	     
       }
 }
