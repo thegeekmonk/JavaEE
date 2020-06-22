@@ -15,8 +15,10 @@ public class AddServlet extends HttpServlet
     	 int j = Integer.parseInt(req.getParameter("num2"));
     	 
     	 int k = i+j;
+    	
+    	//cookie is maintained by tomcat server 
     	 
-    	Cookie cookie = new Cookie("k",k+"");
+    	Cookie cookie = new Cookie("k",k+"");  //we are creating cookie object with new keyword.
     	res.addCookie(cookie);
     	
     	res.sendRedirect("sqrtRequest");

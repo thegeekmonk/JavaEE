@@ -14,13 +14,13 @@ public class SquareServlet extends HttpServlet
 	public void doGet(HttpServletRequest req,HttpServletResponse res) throws IOException
 	{   
 		int k = 0;
-	    Cookie cookie[] = req.getCookies();
+	    Cookie cookie[] = req.getCookies();  //it returns array of cookie hence 
 	    
 	    for(Cookie ck : cookie)
 	    {
 	    	if(ck.getName().equals("k"))
 	    	{
-	    		k = Integer.parseInt(ck.getValue());
+	    		k = Integer.parseInt(ck.getValue()); // parsing string value returned by getValue() of cookie object
 	    		k = k*k;	    		
 	    	}
 	    }
