@@ -19,7 +19,7 @@ public class AddServlet extends HttpServlet
 		  
 //		  res.sendRedirect("sqrtRequest");
 		  
-     	  res.sendRedirect("sqrtRequest?k="+k);  //URL Redirecting
+     	  res.sendRedirect("sqrtRequest?k="+k);  //URL Rewriting
 		  
 		  
 	  }
