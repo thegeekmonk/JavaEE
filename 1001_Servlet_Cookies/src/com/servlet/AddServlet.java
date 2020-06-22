@@ -19,7 +19,8 @@ public class AddServlet extends HttpServlet
     	//cookie is maintained by tomcat server 
     	 
     	Cookie cookie = new Cookie("k",k+"");  //we are creating cookie object with new keyword.
-    	res.addCookie(cookie);
+    	res.addCookie(cookie);   //we have add cookie object in HttpServletResponse so that it can be fetched in other servlet
+    	                         //cookie will be available throughout the session
     	
     	res.sendRedirect("sqrtRequest");
     	
