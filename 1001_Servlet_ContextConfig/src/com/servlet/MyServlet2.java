@@ -15,11 +15,11 @@ public class MyServlet2 extends HttpServlet
 	   {   	
 		   
            ServletContext con = getServletContext();		   
-		   String name = (String) con.getAttribute("tech");
+		   String tech = con.getInitParameter("tech");
 		   
 		   PrintWriter out = res.getWriter();
 		   
-		   out.println("Technology for Servlet2 is : "+name);		   
+		   out.println("Technology for Servlet2 is : "+tech);		   
 		   
 	   }
 
