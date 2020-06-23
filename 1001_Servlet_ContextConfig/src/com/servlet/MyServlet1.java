@@ -13,10 +13,10 @@ public class MyServlet1 extends HttpServlet
 {
 	   public void doGet(HttpServletRequest req,HttpServletResponse res) throws IOException
 	   {
-		   String name = req.getParameter("name");		   
+		   String name = req.getParameter("name");	//Getting parameter from client file	   
 		   
-		   ServletConfig con = getServletConfig();		   
-		   String tech = con.getInitParameter("tech");
+		   ServletConfig con = getServletConfig();	     //Getting ServletConfig object from getServletConfig() of HttpServlet class 
+		   String tech = con.getInitParameter("tech");   //extracting initial parameter from web.xml file	
 		   
 		   
 		   PrintWriter out = res.getWriter();
