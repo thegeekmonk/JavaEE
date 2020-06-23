@@ -22,6 +22,12 @@ public class MyServlet1 extends HttpServlet
 		   PrintWriter out = res.getWriter();
 		   out.println("Technology for  "+name+"  is : "+tech);
 		   
+		   
+		   ServletContext cont = getServletContext();		   
+		   String phone = cont.getInitParameter("phone");
+		   
+		   out.println(name+" is having "+phone);
+		   
 		   //res.sendRedirect("request2");
 		   
 	   }
