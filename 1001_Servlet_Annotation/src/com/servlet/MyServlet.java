@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/addRequest")
+
+@WebServlet("/addRequest")    //this annotation will help binding the request with this servlet
 public class MyServlet extends HttpServlet 
 {
        public void doGet(HttpServletRequest req,HttpServletResponse res) throws IOException
