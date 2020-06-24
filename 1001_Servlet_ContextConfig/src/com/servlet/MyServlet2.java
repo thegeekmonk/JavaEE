@@ -15,8 +15,8 @@ public class MyServlet2 extends HttpServlet
 	   {   	
 		   String name = req.getParameter("name");	//Getting parameter from client file	
 		   
-           ServletContext con = getServletContext();		   
-		   String tech = con.getInitParameter("tech");
+           ServletContext con = getServletContext();	//servlet context will be available for all the servlet 	   
+		   String tech = con.getInitParameter("tech");  //extracting the initial parameter
 		   
 		   PrintWriter out = res.getWriter();
 		   
