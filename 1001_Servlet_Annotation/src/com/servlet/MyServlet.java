@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/addRequest")    //this annotation will help binding the request with this servlet
+//With the use of below annotation , we don't need web.xml file servlet tags
+
+@WebServlet("/addRequest")    //this annotation will help binding the request with this Servlet
 public class MyServlet extends HttpServlet 
 {
        public void doGet(HttpServletRequest req,HttpServletResponse res) throws IOException
