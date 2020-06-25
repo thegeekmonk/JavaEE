@@ -22,11 +22,13 @@ public class Application
 		SessionFactory sf = con.buildSessionFactory(rg);		
 		Session session = sf.openSession();
 	    
-		Transaction tx = session.beginTransaction();
+		Transaction tx = session.beginTransaction(); 
 		
 		fr = session.get(Friend.class,102);  //using get() method to fetch, we can also use load() method
 		
 		System.out.println(fr);  //printing friend object with implicit overrided toString() in Friend Class
+		
+		tx.commit();
 	}
 
 }
