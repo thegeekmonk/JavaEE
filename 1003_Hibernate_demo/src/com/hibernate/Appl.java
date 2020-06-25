@@ -4,11 +4,12 @@ import javax.transaction.HeuristicMixedException;
 import javax.transaction.HeuristicRollbackException;
 import javax.transaction.RollbackException;
 import javax.transaction.SystemException;
-import javax.transaction.Transaction;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
 
 public class Appl 
 {
@@ -19,21 +20,23 @@ public class Appl
 		
 		Friend fr = new Friend();
 		
-		fr.setId(801);
-		fr.setName("Balram Kumar");
-		fr.setAge(32);
+		fr.setId(711);
+		fr.setName("Bablu Kumar");
+		fr.setAge(47);
 		
 		
 		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Friend.class);
 		
-		SessionFactory sf = con.buildSessionFactory();
+		ServiceRegistry reg = new StandardServiceRegistryBuilder().applySettings(con.getProperties()).build();
+		
+		SessionFactory sf = con.buildSessionFactory(reg);
 		
 		Session session = sf.openSession();
 		
-		org.hibernate.Transaction tx = session.beginTransaction();
+		org.hibernate.Transaction tx = session.beginTransaction();  //creating transaction object
 		session.save(fr);
 		
-		tx.commit();
+		tx.commit();                           //commit transaction
 
 	}
 
