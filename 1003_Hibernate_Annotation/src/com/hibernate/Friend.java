@@ -17,9 +17,10 @@ public class Friend
      @Column(name="umar")
      private int age;
      
-     @Transient
+//     @Transient
      private String name;
      
+    //creating table with name "Dost" with three field (Id,Age,Name)
      
 	public int getId() 
 	{
