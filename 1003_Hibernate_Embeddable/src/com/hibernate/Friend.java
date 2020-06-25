@@ -1,5 +1,6 @@
 package com.hibernate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -11,7 +12,7 @@ public class Friend
 	@Id
     private int id;
 	
-	
+	@Column(name="umar")
     private int age;
     private FriendName name;
         
