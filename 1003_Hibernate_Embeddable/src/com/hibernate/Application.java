@@ -22,7 +22,7 @@ public class Application
 		Friend fr = new Friend();
 		fr.setId(401);
 		fr.setAge(30);
-		fr.setName(fn);
+		fr.setName(fn);    //using FriendName Object as a field in Friend class
 		
 		
 		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Friend.class);
