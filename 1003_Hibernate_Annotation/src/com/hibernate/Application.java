@@ -15,9 +15,9 @@ public class Application
 		// TODO Auto-generated method stub
 		
 		Friend fr = new Friend();
-		fr.setId(101);
-		fr.setAge(27);
-		fr.setName("Akhilesh Kumar");
+		fr.setId(102);
+		fr.setAge(28);
+		fr.setName("Satyasheel Kumar");
 		
 		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Friend.class);		
 		ServiceRegistry rg = new StandardServiceRegistryBuilder().applySettings(con.getProperties()).build();

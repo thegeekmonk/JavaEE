@@ -17,6 +17,7 @@ public class Friend
      @Column(name="umar")
      private int age;
      
+     @Transient
      private String name;
      
      
