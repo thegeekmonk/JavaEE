@@ -24,9 +24,9 @@ public class Application
 	    
 		Transaction tx = session.beginTransaction();
 		
-		fr = session.get(Friend.class,102);
+		fr = session.get(Friend.class,102);  //using get() method to fetch, we can also use load() method
 		
-		System.out.println(fr);
+		System.out.println(fr);  //printing friend object with implicit overrided toString() in Friend Class
 	}
 
 }
