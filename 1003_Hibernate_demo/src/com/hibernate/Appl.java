@@ -28,7 +28,6 @@ public class Appl
 		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Friend.class);
 		
 		ServiceRegistry reg = new StandardServiceRegistryBuilder().applySettings(con.getProperties()).build();
-		
 		SessionFactory sf = con.buildSessionFactory(reg);
 		
 		Session session = sf.openSession();
