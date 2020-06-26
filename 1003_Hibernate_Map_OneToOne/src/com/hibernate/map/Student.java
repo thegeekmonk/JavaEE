@@ -26,6 +26,16 @@ public class Student
 	public void setName(String name) {
 		this.name = name;
 	}
+	public Laptop getLaptop() {
+		return laptop;
+	}
+	
+	
+	public void setLaptop(Laptop laptop) {
+		this.laptop = laptop;
+	}
+	
+	
      
      
 }
