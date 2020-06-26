@@ -47,7 +47,8 @@ public class Application
 		session.save(lap1);
 		session.save(lap2);
 		
-		
+		tx.commit();
+			
          
 	}
 
