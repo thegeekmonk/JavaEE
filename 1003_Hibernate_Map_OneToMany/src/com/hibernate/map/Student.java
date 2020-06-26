@@ -16,8 +16,8 @@ public class Student
      private int roll;
      private String name;
      
-     @OneToMany
-     private List<Laptop> laptop = new ArrayList<Laptop>();
+     @OneToMany           //not using @mappedBy annotation here since we don't want table laptop to know about relation with student
+     private List<Laptop> laptop = new ArrayList<Laptop>();  //we have to instantiate laptop List variable
 
 	public int getRoll() 
 	{

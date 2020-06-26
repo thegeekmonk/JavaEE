@@ -37,10 +37,11 @@ public class Application
         
 		Transaction tx = session.beginTransaction();
 		
-		session.save(lap1);
-		session.save(lap2);
+		session.save(lap1);  //first save laptop entry into database
+		session.save(lap2);  //first save laptop entry into database
 		
-		session.save(st);
+		                     //once laptop entry is created , we can have relationship with student table
+		session.save(st);    //then save student entry into database
 		
 		tx.commit();
 		
