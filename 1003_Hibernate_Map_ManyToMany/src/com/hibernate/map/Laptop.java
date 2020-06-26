@@ -13,7 +13,7 @@ public class Laptop
      private int lid;
      private String lname;
      
-     @ManyToMany()
+     @ManyToMany
      private ArrayList<Student> student = new ArrayList<Student>();
 
 	public int getLid() {

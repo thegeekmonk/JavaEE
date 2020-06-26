@@ -15,7 +15,7 @@ public class Student
      private int roll;
      private String name;
      
-     @ManyToMany()
+     @ManyToMany
      private ArrayList<Laptop> laptop = new ArrayList<Laptop>();
 
 	public int getRoll() {
