@@ -8,7 +8,8 @@ import javax.persistence.*;
 @Entity
 @Table(name="laptop")
 public class Laptop 
-{
+{    
+	 @Id
      private int lid;
      private String lname;
      
