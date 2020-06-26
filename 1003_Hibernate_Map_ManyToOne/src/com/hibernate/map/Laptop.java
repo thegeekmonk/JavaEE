@@ -36,6 +36,14 @@ public class Laptop
 	{
 		this.lname = lname;
 	}
+
+	public Student getStud() {
+		return stud;
+	}
+
+	public void setStud(Student stud) {
+		this.stud = stud;
+	}
     
     
     
