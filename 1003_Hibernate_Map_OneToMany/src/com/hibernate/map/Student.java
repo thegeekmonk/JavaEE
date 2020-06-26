@@ -1,9 +1,12 @@
 package com.hibernate.map;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.*;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "student")
@@ -14,7 +17,7 @@ public class Student
      private String name;
      
      @OneToMany
-     private  ArrayList<Laptop> laptop;
+     private List<Laptop> laptop = new ArrayList<Laptop>();
 
 	public int getRoll() 
 	{
@@ -38,7 +41,7 @@ public class Student
 
 	public ArrayList<Laptop> getLaptop() 
 	{
-		return laptop;
+		return (ArrayList<Laptop>) laptop;
 	}
 
 	public void setLaptop(ArrayList<Laptop> laptop) 
