@@ -21,7 +21,7 @@ public class Application
 		Student stu = new Student();
 		stu.setRoll(101);
 		stu.setName("Akhilesh Kumar");
-		stu.setLaptop(lap);
+		stu.setLaptop(lap);           //setting laptop field in student class
 		
 		
 		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student.class).addAnnotatedClass(Laptop.class);

@@ -12,8 +12,8 @@ public class Student
      private int roll;
      private String name;
      
-     @OneToOne
-     private Laptop laptop;
+     @OneToOne                //annotation used for deciding mapping relation with laptop
+     private Laptop laptop; 
      
 	public int getRoll() {
 		return roll;

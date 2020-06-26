@@ -5,10 +5,10 @@ import javax.persistence.Id;
 import javax.persistence.*;
 
 @Entity
-@Table(name="laptop")
+@Table(name="laptop")     //annotation used for table name 
 public class Laptop 
 {    
-	 @Id
+	 @Id                   //annotation used for primary key
      private int lid;
      private String name;
      
