@@ -1,6 +1,7 @@
 package com.hibernate.map;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,9 +17,10 @@ public class Student
      private String name;
      
      @ManyToMany
-     private ArrayList<Laptop> laptop = new ArrayList<Laptop>();
+     private List<Laptop> laptop = new ArrayList<Laptop>();
 
-	public int getRoll() {
+	public int getRoll()
+	{
 		return roll;
 	}
 
@@ -35,7 +37,7 @@ public class Student
 	}
 
 	public ArrayList<Laptop> getLaptop() {
-		return laptop;
+		return (ArrayList<Laptop>) laptop;
 	}
 
 	public void setLaptop(ArrayList<Laptop> laptop) {
