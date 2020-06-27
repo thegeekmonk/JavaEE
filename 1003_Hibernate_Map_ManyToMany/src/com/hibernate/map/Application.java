@@ -33,8 +33,15 @@ public class Application
 		lap1.getStudent().add(st1);
 		lap1.getStudent().add(st2);
 		
+		lap2.getStudent().add(st1);
+		lap2.getStudent().add(st2);
+		
+		
 		st1.getLaptop().add(lap1);
 		st1.getLaptop().add(lap2);
+		
+		st2.getLaptop().add(lap1);
+		st2.getLaptop().add(lap2);
 		
 		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student.class).addAnnotatedClass(Laptop.class);
 		ServiceRegistry rg = new StandardServiceRegistryBuilder().applySettings(con.getProperties()).build();
