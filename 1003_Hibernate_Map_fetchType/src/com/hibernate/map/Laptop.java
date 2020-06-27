@@ -1,12 +1,13 @@
 package com.hibernate.map;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.*;
 
 @Entity
-@Table(name="laptop")
+@Table(name="laptop",catalog="FetchType.LAZY")
 public class Laptop 
 {   
 	@Id
@@ -43,6 +44,11 @@ public class Laptop
 
 	public void setStud(Student stud) {
 		this.stud = stud;
+	}
+
+	@Override
+	public String toString() {
+		return "Laptop [lid=" + lid + ", lname=" + lname + ", stud=" + stud + "]";
 	}
     
     

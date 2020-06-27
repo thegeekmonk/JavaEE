@@ -47,6 +47,11 @@ public class Application
 //		session.save(lap1);
 //		session.save(lap2);
 		
+		Laptop lap = session.get(Laptop.class,1);
+		
+		System.out.println(lap);
+		
+		
 		tx.commit();
 			
          
