@@ -49,7 +49,7 @@ public class Application
 		
 		Laptop lap = session.get(Laptop.class,1);
 		
-		System.out.println(lap);
+//		System.out.println(lap);
 		
 		
 		tx.commit();
