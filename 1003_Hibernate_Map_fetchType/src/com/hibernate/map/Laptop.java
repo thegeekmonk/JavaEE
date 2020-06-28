@@ -7,14 +7,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="laptop",catalog="FetchType.LAZY")
+@Table(name="laptop")
 public class Laptop 
 {   
 	@Id
     private int lid;
     private String lname;
     
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     private Student stud;
     
     

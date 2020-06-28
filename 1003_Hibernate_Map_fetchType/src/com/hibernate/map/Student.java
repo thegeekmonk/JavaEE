@@ -1,7 +1,5 @@
 package com.hibernate.map;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import javax.persistence.*;
 
 @Entity
@@ -12,6 +10,8 @@ public class Student
     private int roll;
     private String name;  
     
+    @OneToMany(fetch=FetchType.LAZY)
+    private Laptop laptop;
     
 	public int getRoll() 
 	{

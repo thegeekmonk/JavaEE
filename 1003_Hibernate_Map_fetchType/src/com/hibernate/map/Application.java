@@ -47,7 +47,7 @@ public class Application
 //		session.save(lap1);
 //		session.save(lap2);
 		
-		Laptop lap = session.get(Laptop.class,1);
+		Student stu = session.get(Student.class,10);
 		
 //		System.out.println(lap);
 		
