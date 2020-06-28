@@ -18,7 +18,7 @@ public class Student
     private int roll;
     private String name;  
     
-    @OneToMany(fetch=FetchType.LAZY,mappedBy="stud")
+    @OneToMany(fetch=FetchType.EAGER,mappedBy="stud")
     private List<Laptop> laptop = new ArrayList<Laptop>();
     
 	public int getRoll() 
