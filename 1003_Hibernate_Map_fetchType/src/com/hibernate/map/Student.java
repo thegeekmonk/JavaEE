@@ -31,6 +31,17 @@ public class Student
 	{
 		this.name = name;
 	}
+	
+
+	public Laptop getLaptop() 
+	{
+		return laptop;
+	}
+
+	public void setLaptop(Laptop laptop) 
+	{
+		this.laptop = laptop;
+	}
     
     
     

@@ -14,7 +14,7 @@ public class Laptop
     private int lid;
     private String lname;
     
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne
     private Student stud;
     
     
