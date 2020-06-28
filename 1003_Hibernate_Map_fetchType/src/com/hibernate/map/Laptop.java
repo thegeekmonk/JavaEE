@@ -48,8 +48,10 @@ public class Laptop
 
 	@Override
 	public String toString() {
-		return "Laptop [lid=" + lid + ", lname=" + lname + ", stud=" + stud + "]";
+		return "Laptop [lid=" + lid + ", lname=" + lname + ", student=" + stud + "]";
 	}
+
+	
     
     
     

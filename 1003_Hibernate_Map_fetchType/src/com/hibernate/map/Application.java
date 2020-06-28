@@ -1,5 +1,8 @@
 package com.hibernate.map;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -9,7 +12,6 @@ import org.hibernate.service.ServiceRegistry;
 
 public class Application 
 {
-
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
@@ -32,8 +34,7 @@ public class Application
 //		Student st2 = new Student();
 //		st2.setRoll(11);
 //		st2.setName("Satya Prasad");
-				
-		
+						
 		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student.class).addAnnotatedClass(Laptop.class);
 		ServiceRegistry rg = new StandardServiceRegistryBuilder().applySettings(con.getProperties()).build();
 		
@@ -42,18 +43,27 @@ public class Application
 		
 		Transaction tx = session.beginTransaction();
 //		
-//		session.save(st);
-//		
+//		session.save(st);	
 //		session.save(lap1);
 //		session.save(lap2);
 		
-		Student stu = session.get(Student.class,10);
+		Student stu = session.get(Student.class,10);		
+		System.out.println("Hello : "+stu.getName());
 		
-//		System.out.println(lap);
+		//@SuppressWarnings("unchecked")
+		Collection<Laptop> lap = stu.getLaptop();	
 		
+		System.out.println("Total Entries : "+lap.size());
 		
-		tx.commit();
+		for(Laptop laptop : lap)
+		{   
+//			System.out.println("Hello");
+//			System.out.println("Laptop ID : "+laptop.getLid()+"  Name : "+laptop.getLname());
 			
+			System.out.println(laptop);
+		}
+				
+		tx.commit();			
          
 	}
 
