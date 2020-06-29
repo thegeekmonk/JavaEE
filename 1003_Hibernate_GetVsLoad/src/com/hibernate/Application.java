@@ -20,13 +20,13 @@ public class Application
 		SessionFactory sf = con.buildSessionFactory(rg);
 		Session session = sf.openSession();
 		
-		Student st = new Student();
-		st.setRoll(15);
-		st.setName("Vivek Kumar");
+//		Student st = new Student();
+////		st.setRoll(15);
+////		st.setName("Vivek Kumar");
 		
 		Transaction tx = session.beginTransaction();
 		
-		session.save(st);
+		Student stu = session.get(Student.class,12);
 		
 		tx.commit();
 
