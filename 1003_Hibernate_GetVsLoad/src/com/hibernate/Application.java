@@ -20,17 +20,19 @@ public class Application
 		SessionFactory sf = con.buildSessionFactory(rg);
 		Session session = sf.openSession();
 		
-//		Student st = new Student();
-////		st.setRoll(15);
-////		st.setName("Vivek Kumar");
+//		    Student st = new Student();
+//		    st.setRoll(15);
+//		    st.setName("Vivek Kumar");
 		
 		Transaction tx = session.beginTransaction();
 		
-//		Student stu = session.get(Student.class,12);
-//		System.out.println(stu);
+		Student stu = session.get(Student.class,18);
+		System.out.println(stu);
 		
-		Student st = session.load(Student.class,12);
-		System.out.println(st);       //since we are using 'st' object in printing, hence select query is getting fired
+		
+//		
+//		Student st = session.load(Student.class,12);   //also  called 'st' here as proxy object returned by load
+//		System.out.println(st);       //since we are using 'st' object in printing, hence select query is getting fired
 		
 		tx.commit();
 
