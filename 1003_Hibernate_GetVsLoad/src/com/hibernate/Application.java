@@ -28,6 +28,7 @@ public class Application
 		
 		Student stu = session.get(Student.class,18);
 		System.out.println(stu);
+		System.out.println(stu.getName());
 		
 		
 //		
