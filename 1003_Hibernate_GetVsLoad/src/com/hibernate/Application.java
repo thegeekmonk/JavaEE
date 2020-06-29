@@ -27,6 +27,7 @@ public class Application
 		Transaction tx = session.beginTransaction();
 		
 		Student stu = session.get(Student.class,12);
+		System.out.println(stu);
 		
 		tx.commit();
 
