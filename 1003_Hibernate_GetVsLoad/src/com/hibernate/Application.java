@@ -26,14 +26,14 @@ public class Application
 		
 		Transaction tx = session.beginTransaction();
 		
-		Student stu = session.get(Student.class,18);
-		System.out.println(stu);
-		System.out.println(stu.getName());
+//		Student stu = session.get(Student.class,18);
+//		System.out.println(stu);
+//		System.out.println(stu.getName());
 		
 		
-//		
-//		Student st = session.load(Student.class,12);   //also  called 'st' here as proxy object returned by load
-//		System.out.println(st);       //since we are using 'st' object in printing, hence select query is getting fired
+	
+		Student st = session.load(Student.class,18);   //also  called 'st' here as proxy object returned by load
+		System.out.println(st);       //since we are using 'st' object in printing, hence select query is getting fired
 		
 		tx.commit();
 
