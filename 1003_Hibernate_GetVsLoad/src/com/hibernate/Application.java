@@ -30,6 +30,7 @@ public class Application
 //		System.out.println(stu);
 		
 		Student st = session.load(Student.class,12);
+		System.out.println(st);
 		
 		tx.commit();
 
