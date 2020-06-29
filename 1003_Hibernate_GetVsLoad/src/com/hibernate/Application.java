@@ -21,8 +21,8 @@ public class Application
 		Session session = sf.openSession();
 		
 		Student st = new Student();
-		st.setRoll(11);
-		st.setName("Kushal Jain");
+		st.setRoll(15);
+		st.setName("Vivek Kumar");
 		
 		Transaction tx = session.beginTransaction();
 		
