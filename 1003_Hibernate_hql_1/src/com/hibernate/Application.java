@@ -23,18 +23,17 @@ public class Application
 		
 		Session session = sf.openSession();		
 		
-        Query q = session.createQuery("from Friend where id = 5");
+        Query q = session.createQuery("from Friend where age > 30");
 		
 		Transaction tx = session.beginTransaction();	
 		
-		   Friend fr = (Friend)q.uniqueResult();		
-	
-			System.out.println(fr);
-	
-		
+		    List<Friend> fr = q.list();	
+		    
+		    for(Friend frn : fr)
+			System.out.println(frn);
+			
 		tx.commit();
 		
-
 	}
 
 }
