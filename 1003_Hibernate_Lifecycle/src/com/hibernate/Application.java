@@ -29,12 +29,13 @@ public class Application
 		
 		Transaction tx = session.beginTransaction();
 		
-		session.save(st); //Hibernate Object 'st' is in Persistent state after save()
-		
-		st.setName("Rameshba Kumar");   //Hibernate Object 'st' still in persistent state and name change will be reflected in DB
-		
+		session.save(st); //Hibernate Object 'st' is in Persistent state after save()		
+		st.setName("Rameshba Kumar");   //Hibernate Object 'st' still in persistent state and name change will be reflected in DB		
 		
 		tx.commit();
+		
+		session.detach(st);
+		st.setName("Ramesh Kumar");
 		
 		
 	}
