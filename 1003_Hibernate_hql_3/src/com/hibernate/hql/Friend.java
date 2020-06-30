@@ -5,7 +5,8 @@ import javax.persistence.*;
 @Entity
 @Table(name="friend")
 public class Friend 
-{
+{   
+	@Id
     private int id;
     private int age;
     private String name;
