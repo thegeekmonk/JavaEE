@@ -1,7 +1,9 @@
 package com.hibernate.hql;
 
 import java.util.List;
+import java.util.Map;
 
+import org.hibernate.Criteria;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -25,14 +27,20 @@ public class Application
 		Transaction tx = session.beginTransaction();
 		
 		//Native Query , Using SQL Query in Hibernate
-		SQLQuery query = session.createSQLQuery("select *from friend");
-		query.addEntity(Friend.class);
+		SQLQuery query = session.createSQLQuery("select id,name from friend where age = 27");
+//		query.addEntity(Friend.class);
 		
-		List<Friend> friends = query.list();
+		query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
 		
-		for(Friend fr : friends)
+		List friends = query.list();
+		
+//		System.out.println(friends);
+		
+		for(Object fr : friends)
 		{
-			System.out.println(fr);
+			Map mp = (Map)fr;			
+			System.out.println(mp.get("id")+"  "+mp.get("name"));
+			
 		}
 		
 		
