@@ -34,8 +34,8 @@ public class Application
 		
 		tx.commit();
 		
-		session.detach(st);
-		st.setName("Ramesh Kumar");
+		session.detach(st); //after detach(st) state of object 'st'changed to detached state , hence chages will not be reflected in DB
+		st.setName("Ramesh Kumar"); //trying to change data , it will not be reflected in DB
 		
 		
 	}
