@@ -1,7 +1,15 @@
 package com.hibernate.jpa;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.*;
+
+
+@Entity
+@Table(name="friend")
 public class Friend 
-{
+{   
+	@Id
     private int id;
     private int age;
     private String name;
