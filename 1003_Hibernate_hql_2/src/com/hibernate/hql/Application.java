@@ -22,8 +22,17 @@ public class Application
 		Session session = sf.openSession();
 		Transaction tx = session.beginTransaction();
 		
-		Query q = session.createQuery("select id,name from Friend where id = 5");
-		Object[] friend = (Object[])q.uniqueResult();
+		int var = 8;
+		
+//		Query q = session.createQuery("select id,name from Friend f where f.id:var");
+//		q.setParameter("var",var);
+//		Object[] friend = (Object[])q.uniqueResult();
+		
+		Query q = session.createQuery("select sum(age) from Friend where id > 15");
+		Long add = (Long)q.uniqueResult();
+		
+		
+		System.out.println(add);
 		
 //		List<Object[]> friend = (List<Object[]>)q.list();
 //		
@@ -34,7 +43,7 @@ public class Application
 //			System.out.println(fr[0]+" : "+fr[1]);
 //		}
 //		
-		System.out.println(friend[0]+" : "+friend[1]);
+//		System.out.println(friend[0]+" : "+friend[1]);
 		
 		
 		tx.commit();
