@@ -23,15 +23,14 @@ public class Application
 		
 		Session session = sf.openSession();		
 		
-        Query q = session.createQuery("from Friend");
+        Query q = session.createQuery("from Friend where id = 5");
 		
-		Transaction tx = session.beginTransaction();		
-		List<Friend> list = q.list();
+		Transaction tx = session.beginTransaction();	
 		
-		for(Friend friend : list)
-		{
-			System.out.println(friend);
-		}
+		   Friend fr = (Friend)q.uniqueResult();		
+	
+			System.out.println(fr);
+	
 		
 		tx.commit();
 		
