@@ -24,7 +24,7 @@ public class Application
 		Session session = sf.openSession();		
 		Transaction tx = session.beginTransaction();
 		
-		
+		//Native Query , Using SQL Query in Hibernate
 		SQLQuery query = session.createSQLQuery("select *from friend");
 		query.addEntity(Friend.class);
 		
