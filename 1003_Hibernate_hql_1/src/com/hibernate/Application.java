@@ -1,7 +1,8 @@
 package com.hibernate;
 
-import java.util.Random;
+import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -20,21 +21,17 @@ public class Application
 		ServiceRegistry rg = new StandardServiceRegistryBuilder().applySettings(con.getProperties()).build();
 		SessionFactory sf = con.buildSessionFactory(rg);
 		
-		Session session = sf.openSession();
+		Session session = sf.openSession();		
 		
-		Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Friend");
 		
-		Random r = new Random();
+		Transaction tx = session.beginTransaction();		
+		List<Friend> list = q.list();
 		
-		for(int i = 1;i <= 20;i++)
+		for(Friend friend : list)
 		{
-			Friend fr = new Friend();
-			fr.setId(i);
-			fr.setName("Name --> "+i);
-			fr.setAge(r.nextInt(70));
-			
-			session.save(fr);
-		}		
+			System.out.println(friend);
+		}
 		
 		tx.commit();
 		
