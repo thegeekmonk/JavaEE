@@ -1,5 +1,6 @@
 package com.hibernate.cache;
 
-public class Student {
+public class Student 
+{
 
 }
