@@ -10,17 +10,19 @@ import javax.persistence.*;
 public class Student 
 {     
 	  @Id
-      private int id;
+      private int roll;
       private String name;     
       
-	public int getId() 
-	{
-		return id;
-	}
-	public void setId(int id) 
-	{
-		this.id = id;
-	}
+	
+    public int getRoll() 
+    {
+  		return roll;
+  	}
+  	public void setRoll(int roll) 
+  	{
+  		this.roll = roll;
+  	}   
+      
 	public String getName() 
 	{
 		return name;
@@ -32,10 +34,10 @@ public class Student
 	
 	
 	@Override
-	public String toString() {
-		return "Student [id=" + id + ", name=" + name + "]";
-	} 
-	
-	
+	public String toString() 
+	{
+		return "Student [id=" + roll + ", name=" + name + "]";
+	}
+		
       
 }
