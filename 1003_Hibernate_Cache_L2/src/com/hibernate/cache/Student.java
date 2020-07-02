@@ -4,33 +4,44 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.*;
 
+import org.hibernate.annotations.Cache;  
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 @Entity
 @Table(name="student")
+@Cacheable
+@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)  
 public class Student 
 {
 	@Id
     private int roll;
 	private String name;
 	
-	public int getRoll() {
+	public int getRoll() 
+	{
 		return roll;
 	}
-	public void setRoll(int roll) {
+	
+	public void setRoll(int roll) 
+	{
 		this.roll = roll;
 	}
-	public String getName() {
+	
+	public String getName() 
+	{
 		return name;
 	}
-	public void setName(String name) {
+	
+	public void setName(String name) 
+	{
 		this.name = name;
 	}
 	
 	
 	@Override
-	public String toString() {
+	public String toString() 
+	{
 		return "Student [roll=" + roll + ", name=" + name + "]";
-	}
-	
-	
+	}	
 	
 }
