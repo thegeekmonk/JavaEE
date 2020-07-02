@@ -28,17 +28,22 @@ public class Application
 		
 		Transaction tx = session.beginTransaction();		
 		System.out.println(st);
+		
+		st = session.get(Student.class,10);
+		System.out.println(st);
+		
+		
 		tx.commit();
 		session.close();
 		
-		Session session2 = sf.openSession();
-		Transaction tx1 = session2.beginTransaction();
-		
-		
-		st = session2.get(Student.class,10);
-		System.out.println(st);		
-		tx1.commit();
-		session2.close();
+//		Session session2 = sf.openSession();
+//		Transaction tx1 = session2.beginTransaction();
+//		
+//		
+//		st = session2.get(Student.class,10);
+//		System.out.println(st);		
+//		tx1.commit();
+//		session2.close();
 	}
 
 }
