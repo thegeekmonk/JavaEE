@@ -1,8 +1,10 @@
 package com.hibernate.cache;
 
-public class Application {
+public class Application 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		// TODO Auto-generated method stub
 
 	}
