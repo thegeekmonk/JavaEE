@@ -9,8 +9,8 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
 @Table(name="student")
-@Cacheable
-@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)  
+@Cacheable    //it will make Student class to use cache
+@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)   //caching will work only for read operation
 public class Student 
 {
 	@Id
