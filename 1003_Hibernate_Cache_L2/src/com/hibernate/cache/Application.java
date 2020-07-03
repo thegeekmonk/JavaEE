@@ -21,7 +21,7 @@ public class Application
         
         Student s1 = session1.get(Student.class,10);
         System.out.println(s1);
-        session1.beginTransaction().commit();
+        session1.beginTransaction().commit(); //committing transaction
         session1.close();
         
         
