@@ -25,14 +25,16 @@ public class Application
         session1.close();
         
         
-        Session session2 = sf.openSession();
-        Student s2 = session2.get(Student.class,10);
+        Session session2 = sf.openSession();     //using another session to test 2nd level cache 
+        Student s2 = session2.get(Student.class,10);  //firing the select query with same data which in session1 
         System.out.println(s2);
         
         session2.beginTransaction().commit();
         session2.close();
         
-        //problem with jar file
+    
+        
+        //problem solved removed jar file slf4j-api-1.6.1.jar
         
 	}
 

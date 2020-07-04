@@ -13,7 +13,6 @@
 	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/hibernate-c3p0-5.3.1.Final.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/hibernate-commons-annotations-5.0.3.Final.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/hibernate-commons-annotations-5.0.4.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/hibernate-core-5.3.1.Final.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/hibernate-core-5.3.6.Final.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/hibernate-ehcache-5.3.6.Final.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/hibernate-envers-5.3.1.Final.jar"/>
@@ -37,7 +36,6 @@
 	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/org.osgi.core-4.3.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/postgresql-42.2.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/proxool-0.8.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AkhileshPC/Downloads/hibernatejar/slf4j-api-1.7.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
