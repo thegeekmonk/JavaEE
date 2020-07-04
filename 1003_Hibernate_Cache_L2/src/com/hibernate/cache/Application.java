@@ -32,7 +32,7 @@ public class Application
         session2.beginTransaction().commit();
         session2.close();
         
-    
+        //In this 2nd level cache implementation select query will not be fired if data is already there in another session
         
         //problem solved removed jar file slf4j-api-1.6.1.jar
         
