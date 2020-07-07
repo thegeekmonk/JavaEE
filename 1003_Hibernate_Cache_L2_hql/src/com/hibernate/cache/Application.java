@@ -1,5 +1,7 @@
 package com.hibernate.cache;
 
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -20,11 +22,15 @@ public class Application
 		SessionFactory sf = con.buildSessionFactory(rg);
 		Session session = sf.openSession();
 		
+		Student st;
+		
 		Transaction tx = session.beginTransaction();
 		
+		Query q = session.createQuery("from Student where roll = 10"); //we don't need to write select keyword 
 		
+		st = (Student)q.uniqueResult();
 		
-		
+		System.out.println(st);
 		
 		tx.commit();
 	}
