@@ -19,6 +19,9 @@
         
         <property name="cache.use_second_level_cache">true</property>
         <property name="cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+        
+        <mapping resource="friend.hbm.xml"/>  
+        
     </session-factory>
     
     
