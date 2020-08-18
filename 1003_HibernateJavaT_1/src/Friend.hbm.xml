@@ -1,4 +1,3 @@
-
 <?xml version='1.0' encoding='UTF-8'?>  
 <!DOCTYPE hibernate-mapping PUBLIC  
  "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
@@ -9,7 +8,7 @@
 
    <class name = "com.java.hibernate.Friend" table = "friend">
        <id name = "Id">
-          <generator class = "assigned"></generator>
+          <generator class = "assigned"/>
        
        </id>
    
