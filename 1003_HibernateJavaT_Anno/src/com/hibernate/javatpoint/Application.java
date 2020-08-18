@@ -34,6 +34,8 @@ public class Application
 		
 		session.close();
 
+		//<mapping class = "com.hibernate.javatpoint.Friend"/> we have to add this mapping class property in cfg file
+		
 	}
 
 }
