@@ -30,6 +30,8 @@ public class Application
 		session.save(fr);
 		t.commit();
 		
+		System.out.println("Record Added succesfully !!");
+		
 		session.close();
 
 	}
