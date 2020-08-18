@@ -25,7 +25,7 @@ public class Application
 		
 		
 		Friend fr = new Friend();
-		fr.setId(101);
+		fr.setId(102);
 		fr.setAge(27);
 		fr.setName("August");
 		

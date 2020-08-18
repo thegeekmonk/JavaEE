@@ -4,7 +4,7 @@ import javax.persistence.Id;
 
 public class Friend 
 {     
-	  @Id
+	  //@Id
       private int id;
       private String name;
       private int age;

@@ -7,7 +7,7 @@
 <hibernate-mapping>
 
    <class name = "com.java.hibernate.Friend" table = "friend">
-       <id name = "Id">
+       <id name = "id">
           <generator class = "assigned"/>
        
        </id>
