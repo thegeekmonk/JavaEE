@@ -22,9 +22,15 @@ public class Application
 		Session session = sf.openSession();
 		Transaction t = session.beginTransaction();
 		
+		Friend fr = new Friend();
+		fr.setId(103);
+		fr.setAge(34);
+		fr.setName("Hello");
 		
+		session.save(fr);
+		t.commit();
 		
-		
+		session.close();
 
 	}
 
