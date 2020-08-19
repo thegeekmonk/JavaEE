@@ -22,7 +22,7 @@ public class Application
 		Session session = sf.openSession();
 		Transaction t = session.beginTransaction();
 		
-		Friend fr = new Friend();
+		Friend fr = new Friend(); //new object
 		fr.setId(103);
 		fr.setAge(34);
 		fr.setName("Hello");
