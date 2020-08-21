@@ -21,7 +21,7 @@ public class Application
 		SessionFactory factory = meta.getSessionFactoryBuilder().build();
 		Session session = factory.openSession();
 		
-		Transaction t = session.beginTransaction();
+		Transaction t = session.beginTransaction(); //to begin transaction 
 		
 		
 		Friend fr = new Friend();
