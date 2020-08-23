@@ -27,7 +27,7 @@ public class Application
 		Friend fr = new Friend();
 		fr.setId(102);
 		fr.setAge(27);
-		fr.setName("August");
+		fr.setName("August"); //simply writing name as "August"
 		
 		session.save(fr);
 		t.commit();
