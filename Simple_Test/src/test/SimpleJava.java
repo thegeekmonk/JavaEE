@@ -8,7 +8,10 @@ public class SimpleJava
 	
 	public static void pointerTest(int arr[])
 	{
-		
+		arr[0] = -1;
+		arr[1] = -1;
+		arr[2] = -1;
+		arr[3] = -1;
 	}
 
 	public static void main(String[] args) 
@@ -26,6 +29,8 @@ public class SimpleJava
 		
 		pointerTest(arr);
 		
+		
+		System.out.println(arr);
 		
 //		int sum = arr[0] - arr[1];
 //		sum = -sum;
