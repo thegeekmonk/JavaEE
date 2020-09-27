@@ -1,7 +1,15 @@
 package test;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class SimpleJava 
 {
+	
+	public static void pointerTest(int arr[])
+	{
+		
+	}
 
 	public static void main(String[] args) 
 	{
@@ -14,11 +22,15 @@ public class SimpleJava
 //		for(String a : arr)
 //		  System.out.println(a);
 		
-		int arr[] = {2,-3};
+		int arr[] = {2,-3,2,6};
 		
-		int sum = arr[0] - arr[1];
+		pointerTest(arr);
 		
-		System.out.println(sum);
+		
+//		int sum = arr[0] - arr[1];
+//		sum = -sum;
+		
+//		System.out.println((Arrays.stream(arr).boxed().collect(Collectors.toSet())).size());
 	
 	}
 
