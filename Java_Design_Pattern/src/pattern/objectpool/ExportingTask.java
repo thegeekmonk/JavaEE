@@ -13,11 +13,9 @@ public class ExportingTask implements Runnable{
 	
 	public void run()
 	{
-		
 		ExportingProcess exportingProcess = pool.borrowObject();
 		
-		System.out.println("Thread : "+threadNo+" Object with processNo "+exportingProcess.getProcessNo()+" Was borrowed");
-		
+		System.out.println("Thread : "+threadNo+" Object with processNo "+exportingProcess.getProcessNo()+" Was borrowed");		
 		
 		pool.returnObject(exportingProcess);
 		
