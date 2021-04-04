@@ -52,7 +52,7 @@ public abstract class ObjectPool<T> {
 		
 	}
 	
-	public abstract T createObject();
+	protected abstract T createObject();
 	
 	public T borrowObject()
 	{
