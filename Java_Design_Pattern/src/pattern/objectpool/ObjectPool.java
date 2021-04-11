@@ -52,8 +52,6 @@ public abstract class ObjectPool<T> {
 		
 	}
 	
-	protected abstract T createObject();
-	
 	public T borrowObject()
 	{
 		T Object;		
@@ -78,7 +76,9 @@ public abstract class ObjectPool<T> {
 		if(executorService != null)
 			executorService.shutdown();
 	}
-		
+	
+	protected abstract T createObject();
+	
 	public void initialize(final int minObject)
 	{
 		for(int i = 0;i < minObject;i++)
