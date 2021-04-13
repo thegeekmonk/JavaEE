@@ -67,7 +67,10 @@ public class JDBCSingleton {
 		
 		try
 		{
-		ps = con.prepareStatement("update table student where roll="+roll);		
+		
+		con = this.getConnection();	
+		ps = con.prepareStatement("update student set name=? where roll="+roll+"");
+		ps.setString(1,name);
 		recordCounter = ps.executeUpdate();
 		
 		}
