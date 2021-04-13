@@ -3,6 +3,7 @@ package pattern.singleton;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class JDBCSingleton {
@@ -87,6 +88,31 @@ public class JDBCSingleton {
 		}		
 		
 		return recordCounter;
+	}
+	
+	public void display(String name)
+	{
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;		
+		
+		try
+		{
+			con = this.getConnection();
+			ps = con.prepareStatement("select *from student where name=?");
+			ps.setString(1,name);
+			rs = ps.executeQuery();
+						
+			while(rs.next())
+			{
+				System.out.println("Roll No : "+rs.getString("roll")+" Name : "+rs.getString("name"));
+			}					
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
 	}
 
 }
