@@ -90,7 +90,7 @@ public class JDBCSingleton {
 		return recordCounter;
 	}
 	
-	public void display(String name)
+	public void display(String name) throws SQLException
 	{
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -112,7 +112,44 @@ public class JDBCSingleton {
 		{
 			e.printStackTrace();
 		}
+		finally
+		{
+			if(con != null)
+				con.close();
+			if(ps != null)
+				ps.close();
+		}
 		
+	}
+	
+	public int delete(String name) throws SQLException
+	{
+		int resultCounter = 0;
+		
+		Connection con = null;
+		PreparedStatement ps = null;
+		
+		try
+		{
+			con = this.getConnection();
+			ps = con.prepareStatement("delete from student where name=?");
+			ps.setString(1,name);
+			
+			resultCounter = ps.executeUpdate();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(con != null)
+				con.close();
+			if(ps != null)
+				ps.close();
+		}
+		
+		return resultCounter;
 	}
 
 }
