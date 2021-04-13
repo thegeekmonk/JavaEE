@@ -30,7 +30,7 @@ public class JDBCSingleton {
 	  return con;	
 	}	
 	
-	public int insert(String roll,String name) throws SQLException
+	public int insert(int roll,String name) throws SQLException
 	{   
 		int recordCounter = 0;
 		Connection con = null;
@@ -41,7 +41,7 @@ public class JDBCSingleton {
 		  con = JDBCSingleton.getConnection();
 		  
 		  ps = con.prepareStatement("insert into student(roll,name) values(?,?)");		  
-		  ps.setString(1,roll);
+		  ps.setInt(1, roll);
 		  ps.setString(2,name);
 		  
 		  recordCounter = ps.executeUpdate();		  		  
