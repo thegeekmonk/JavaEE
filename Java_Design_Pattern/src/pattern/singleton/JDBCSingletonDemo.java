@@ -22,8 +22,11 @@ public class JDBCSingletonDemo {
 		System.out.println("2.Insert Record");
 		System.out.println("3.Update Record");
 		System.out.println("4.Delete Record ");
-		System.out.println("5.Exiit \n");
+		System.out.println("5.Exit \n");
 				
+		System.out.println("Enter your Choice : ");
+		choice = Integer.parseInt(bf.readLine());		
+		
 		switch(choice)
 		{
 		   
@@ -101,7 +104,10 @@ public class JDBCSingletonDemo {
 		      break;	      
 		default :
 			    break;
-		}		    
+		}	
+		
+		System.out.println("Enter your Choice : ");
+		choice = Integer.parseInt(bf.readLine());		
 		
 		} while(choice != 5);	
 	}	
