@@ -5,11 +5,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class JDBCSingletonDemo {
-
-	public static void main(String[] args) throws IOException {
+	
+	static int choice;
+	static int count = 1;
+		
+	public static void main(String[] args) throws IOException 
+	{
 		// TODO Auto-generated method stub
-		static int choice = 0;
-		static int count = 0;
 		JDBCSingleton jdbc = JDBCSingleton.getSingleton();		
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));	    
 		
@@ -25,12 +27,11 @@ public class JDBCSingletonDemo {
 		switch(choice)
 		{
 		   
-		case 1 : String name;
-		         System.out.println("Enter the name of student : ");
-		         
+		case 1 : //Display Record
+		         System.out.println("Enter the name of student : ");		         
 		         try
 		         {
-		        	 name = bf.readLine();		        	 
+		        	 String name = bf.readLine();		        	 
 		        	 jdbc.display(name);
 		         }
 		         catch(Exception e)
@@ -39,7 +40,7 @@ public class JDBCSingletonDemo {
 		         }		         
 		         break;
 		         
-		case 2 : 			     
+		case 2 : //Insert Record			     
                  System.out.println("Enter the Roll number : ");    
 			     int roll = Integer.parseInt(bf.readLine()); 
 			     System.out.println("Enter the Name : ");
@@ -57,11 +58,51 @@ public class JDBCSingletonDemo {
                  {
        	           e.printStackTrace();
                  }      
-        break;         
-		         			
+                 break; 
+                 
+		case 3 : //update Record
+			      System.out.println("Enter the Roll Number : ");
+			      int rollN = Integer.parseInt(bf.readLine());
+			      System.out.println("Enter the Name : ");
+			      String Sname = bf.readLine();
+			      			      
+			      try
+			      {
+			    	  int i = jdbc.update(rollN, Sname);
+			    	  
+			    	  if(i > 0)
+			    		  System.out.println("Record updated successfully");
+			    	  else
+			    		  System.out.println("Record Couldn't be updated");
+			      }
+			      catch(Exception e)
+			      {
+			    	  e.printStackTrace();
+			      }
+			      break;
+		         		
+		case 4 : //Delete Record
+		      System.out.println("Enter the Roll Number : ");
+		      int rollD = Integer.parseInt(bf.readLine());
+		      			      
+		      try
+		      {
+		    	  int i = jdbc.delete(rollD);
+		    	  
+		    	  if(i > 0)
+		    		  System.out.println("Record updated successfully");
+		    	  else
+		    		  System.out.println("Record Couldn't be updated");
+		      }
+		      catch(Exception e)
+		      {
+		    	  e.printStackTrace();
+		      }
+		      break;	      
 		default :
 			    break;
+		}		    
 		
-		}while(choice != 5);		
-  }
-}		
+		} while(choice != 5);	
+	}	
+ }

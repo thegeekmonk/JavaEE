@@ -60,7 +60,7 @@ public class JDBCSingleton {
 	 return recordCounter;	
 	}
 	
-	public int update(String roll,String name) throws SQLException
+	public int update(int roll,String name) throws SQLException
 	{
 		int recordCounter = 0;		
 		Connection con = null;
@@ -122,7 +122,7 @@ public class JDBCSingleton {
 		
 	}
 	
-	public int delete(String name) throws SQLException
+	public int delete(int roll) throws SQLException
 	{
 		int resultCounter = 0;
 		
@@ -132,8 +132,8 @@ public class JDBCSingleton {
 		try
 		{
 			con = this.getConnection();
-			ps = con.prepareStatement("delete from student where name=?");
-			ps.setString(1,name);
+			ps = con.prepareStatement("delete from student where roll=?");
+			ps.setInt(1, roll);
 			
 			resultCounter = ps.executeUpdate();
 		}
