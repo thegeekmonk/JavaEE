@@ -85,7 +85,7 @@ public class JDBCSingletonDemo {
 			      break;
 		         		
 		case 4 : //Delete Record
-		      System.out.println("Enter the Roll Number : ");
+		      System.out.print("Enter the Roll Number : ");
 		      int rollD = Integer.parseInt(bf.readLine());
 		      			      
 		      try
@@ -93,9 +93,9 @@ public class JDBCSingletonDemo {
 		    	  int i = jdbc.delete(rollD);
 		    	  
 		    	  if(i > 0)
-		    		  System.out.println("Record updated successfully");
+		    		  System.out.println("Record Deleted successfully");
 		    	  else
-		    		  System.out.println("Record Couldn't be updated");
+		    		  System.out.println("Record Couldn't be Deleted");
 		      }
 		      catch(Exception e)
 		      {
@@ -106,8 +106,8 @@ public class JDBCSingletonDemo {
 			    break;
 		}	
 		
-		System.out.println("Enter your Choice : ");
-		choice = Integer.parseInt(bf.readLine());		
+//		System.out.println("Enter your Choice : ");
+//		choice = Integer.parseInt(bf.readLine());		
 		
 		} while(choice != 5);	
 	}	
