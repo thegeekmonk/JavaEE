@@ -2,6 +2,7 @@ package com.java.hibernate.config.Hibernate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity(name="student")
 public class Student {
@@ -9,6 +10,8 @@ public class Student {
 	@Id
 	private int rollno;
 	private String name;
+	//@Transient
+	
 	private String branch;
 	public int getRollno() {
 		return rollno;
@@ -27,6 +30,11 @@ public class Student {
 	}
 	public void setBranch(String branch) {
 		this.branch = branch;
+	}
+	
+	public String toString()
+	{
+		return "Id : "+rollno+", Name : "+name+", Branch :"+branch;
 	}
 	
 }

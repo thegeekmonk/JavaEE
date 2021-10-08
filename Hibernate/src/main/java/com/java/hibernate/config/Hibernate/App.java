@@ -18,8 +18,8 @@ public class App
         System.out.println( "Hello World!" );
         
         Student st = new Student();
-        st.setRollno(101);
-        st.setName("Akhilesh");
+        st.setRollno(103);
+        st.setName("Abhishek");
         st.setBranch("CSE");
         
         Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student.class);
@@ -32,7 +32,12 @@ public class App
         Session session = sf.openSession();    
         Transaction tx = session.beginTransaction();
         
-        session.save(st);
+        //session.save(st);
+        
+        Student stu = session.load(Student.class, 102);
+        
+        System.out.println(stu);
+        
         
         tx.commit();              
     }
