@@ -32,13 +32,16 @@ public class App
         Session session = sf.openSession();    
         Transaction tx = session.beginTransaction();
         
-        //session.save(st);
+        session.save(st);
         
-        Student stu = session.load(Student.class, 102);
+        //Student stu = session.load(Student.class, 102);
         
-        System.out.println(stu);
+       // System.out.println(stu);       
         
+        tx.commit();  
         
-        tx.commit();              
+        session.flush();
+        session.close();
+        sf.close();
     }
 }
