@@ -2,6 +2,7 @@ package com.java.hibernate.mapping.onetoone;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -10,7 +11,7 @@ public class Laptop {
 	@Id
 	private int id;
 	private String lname;
-	@OneToOne
+	@ManyToOne
 	private Employee employee;
 	
 	public int getId() {

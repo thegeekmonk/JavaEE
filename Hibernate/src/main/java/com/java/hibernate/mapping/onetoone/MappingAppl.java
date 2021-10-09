@@ -15,12 +15,18 @@ public class MappingAppl {
 		laptop.setId(1);
 		laptop.setLname("HP");
 		
+		Laptop lap = new Laptop();
+		lap.setId(2);
+		lap.setLname("DELL");
+		
 		Employee emp = new Employee();
 		emp.setEid(101);
 		emp.setEname("Akhilesh");
-		emp.setLaptop(laptop);
+		emp.getLaptop().add(laptop);
+		emp.getLaptop().add(lap);
 		
 		laptop.setEmployee(emp);
+		lap.setEmployee(emp);
 		
 		
 		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Employee.class).addAnnotatedClass(Laptop.class);		
@@ -32,6 +38,7 @@ public class MappingAppl {
 		session.beginTransaction();
 		
 		session.save(laptop);
+		session.save(lap);
 		session.save(emp);
 		
 		session.getTransaction().commit();;
