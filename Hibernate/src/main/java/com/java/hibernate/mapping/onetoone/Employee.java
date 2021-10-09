@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Employee {
@@ -14,7 +14,7 @@ public class Employee {
 	private int eid;
 	private String ename;
 	
-	@OneToMany(mappedBy="employee")
+	@ManyToMany(mappedBy="employee")
 	private List<Laptop> laptop = new ArrayList<Laptop>();
 	
 	public int getEid() {

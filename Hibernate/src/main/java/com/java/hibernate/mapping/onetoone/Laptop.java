@@ -1,9 +1,11 @@
 package com.java.hibernate.mapping.onetoone;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Laptop {
@@ -11,8 +13,8 @@ public class Laptop {
 	@Id
 	private int id;
 	private String lname;
-	@ManyToOne
-	private Employee employee;
+	@ManyToMany
+	private List<Employee> employee = new ArrayList<Employee>();
 	
 	public int getId() {
 		return id;
@@ -26,13 +28,10 @@ public class Laptop {
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-	public Employee getEmployee() {
+	public List<Employee> getEmployee() {
 		return employee;
 	}
-	public void setEmployee(Employee employee) {
+	public void setEmployee(List<Employee> employee) {
 		this.employee = employee;
-	}	
-	
-	
-	
+	}		
 }

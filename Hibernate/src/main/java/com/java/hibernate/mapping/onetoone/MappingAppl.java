@@ -25,9 +25,16 @@ public class MappingAppl {
 		emp.getLaptop().add(laptop);
 		emp.getLaptop().add(lap);
 		
-		laptop.setEmployee(emp);
-		lap.setEmployee(emp);
+		Employee employee = new Employee();
+		employee.setEid(102);
+		employee.setEname("Amit");
+		employee.getLaptop().add(laptop);
+		employee.getLaptop().add(lap);
 		
+		laptop.getEmployee().add(employee);
+		laptop.getEmployee().add(emp);
+	    lap.getEmployee().add(emp);	
+	    lap.getEmployee().add(employee);
 		
 		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Employee.class).addAnnotatedClass(Laptop.class);		
 		ServiceRegistry rg = new StandardServiceRegistryBuilder().applySettings(con.getProperties()).build();
@@ -40,9 +47,9 @@ public class MappingAppl {
 		session.save(laptop);
 		session.save(lap);
 		session.save(emp);
+		session.save(employee);
 		
-		session.getTransaction().commit();;
-		
+		session.getTransaction().commit();		
 	}
 
 }
