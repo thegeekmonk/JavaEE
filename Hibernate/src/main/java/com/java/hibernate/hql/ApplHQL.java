@@ -24,11 +24,18 @@ public class ApplHQL {
 		
 		session.beginTransaction();
 		
-		Query query = session.createQuery("select ename from Employee where eid=101");
+		Query query = session.createQuery("select ename from Employee");
 		
-		Object employee = (Object)query.getSingleResult();
+		List<Object> employee = (List<Object>)query.list();
 		
-		System.out.println(employee);
+		//System.out.println(employee);
+		
+		for(Object obj : employee)
+		{
+			System.out.println(obj);
+		}
+		
+		
 		
 		session.getTransaction().commit();
 		
