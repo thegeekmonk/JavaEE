@@ -15,7 +15,7 @@
         <property name ="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
         
         
-          <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="hibernate.cache.use_query_cache">true</property> 
         
         
     </session-factory>
