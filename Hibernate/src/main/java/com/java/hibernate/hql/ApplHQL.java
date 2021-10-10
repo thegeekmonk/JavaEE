@@ -24,17 +24,21 @@ public class ApplHQL {
 		
 		session.beginTransaction();
 		
-		Query query = session.createQuery("select ename from Employee");
+		Query query = session.createQuery("select sum(eid) from Employee");
 		
-		List<Object> employee = (List<Object>)query.list();
+		//List<Object> employee = (List<Object>)query.list();
 		
+		Long lon = (Long)query.getSingleResult();
+		
+		
+		System.out.println(lon);
 		//System.out.println(employee);
 		
-		for(Object obj : employee)
-		{
-			System.out.println(obj);
-		}
-		
+//		for(Object obj : employee)
+//		{
+//			System.out.println(obj);
+//		}
+//		
 		
 		
 		session.getTransaction().commit();
