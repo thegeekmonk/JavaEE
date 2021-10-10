@@ -51,5 +51,4 @@ public class MappingAppl {
 		
 		session.getTransaction().commit();		
 	}
-
 }
