@@ -1,7 +1,9 @@
 package com.java.hibernate.hql;
 
 import java.util.List;
+import java.util.Map;
 
+import org.hibernate.Criteria;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -30,14 +32,17 @@ public class ApplHQL {
 		
 //		Long lon = (Long)query.getSingleResult();
 		
-		SQLQuery sql = session.createSQLQuery("select *from Employee");
-		sql.addEntity(Employee.class);
+		SQLQuery sql = session.createSQLQuery("select eid,ename from Employee where eid > 100");
+		sql.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
+		//sql.addEntity(Employee.class);
+		
 		List employees = sql.list();
 		
 		
 		for(Object o : employees)
-		{
-			System.out.println(o);
+		{   
+			Map map = (Map)o;
+			System.out.println(map.get("eid")+ " --> "+map.get("ename"));
 		}
 		
 		
