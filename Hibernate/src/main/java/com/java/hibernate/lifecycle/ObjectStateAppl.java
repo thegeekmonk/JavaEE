@@ -27,15 +27,15 @@ public class ObjectStateAppl {
 		//persistance state
 		session.save(emp);
 		
-
+		//removed state
+		session.remove(emp);
 		
 		session.getTransaction().commit();
-	    
-		session.remove(emp);
-		emp.setEname("People");
 		
-		session.detach(emp);
+		//detached state
+		session.detach(emp);		
 		emp.setEname("Detached State Object");
+		session.close();
 		
 	}
 
